@@ -1,0 +1,12 @@
+version: '3'
+
+
+includes:
+  included:
+    taskfile: ./Taskfile.included.yml
+tasks:
+  default:
+    cmds:
+      - echo 'from remote'
+      - task: included:default
+
